@@ -1,0 +1,26 @@
+
+.error {
+	color: red;
+}
+body {
+	background-color: black;
+	color: #57cfce;
+}
+.active {
+	color: white;
+	background-color: black;
+	border: 5px solid white;
+}
+.navbar {
+	border-bottom: 2px solid #57cfce;
+	background-color: black
+}
+.navbar-toggle span {
+	color: #57cfce;
+}
+a: hover {
+	color: #57cfce;
+}
+.content {
+	text-align: center;
+}

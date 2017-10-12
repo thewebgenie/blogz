@@ -1,0 +1,15 @@
+.active {
+	color: white;
+}
+.error {
+	color: red;
+}
+form {
+	background-color: black;
+	color: #57cfce;
+	color: red;
+}
+.active {
+	color: white;
+	background-color: black;
+}
