@@ -24,3 +24,35 @@ a: hover {
 .content {
 	text-align: center;
 }
+form {
+	text-align: center;
+}
+input[type='text'] {
+	color: black;
+}
+input[type='submit'] {
+	color: black;
+	background-color: #57cfce;
+	padding: 5px;
+	text-shadow: 2px;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+input[type='submit']:hover {
+	background-color: black;
+	color: #57cfce;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	text-shadow: 2px;
+}
+form {
+	margin: 2px;
+}
+.pageborder {
+	border: 3px solid #57cfce;
+	border-radius: 5%;
+	padding: 4px;
+}
+table {
+	margin: auto;
+}

@@ -5,8 +5,12 @@
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         <link rel="stylesheet" type="text/css" href="../static/style.css"> 
+        <!--link to font awesome-->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     </head>
 <body>
+	<h1 style="text-align: left">BLOGZ</h1>
+	<p>Bringing blogs to your doorstep</p>
 	<nav class="navbar navbar-inverse bg-inverse">
 		<div class="container-fluid">
 			<div class="navbar-header">
@@ -18,13 +22,26 @@
 			</div><!--navbar-header-->
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav">
-				    <li class="{{navclassnewpost}}"><a href="/newpost">Add a Blog Entry</a></li>
-					<li class="{{navclassmainblog}}"><a href="/blog">Main Blog Page</a></li>
+					<li><a href="/" class="{{home}}fa fa-home fa-2x"></a></li>
+				    <li class="{{navclassnewpost}}"><a href="/newpost">ADD BLOG ENTRY</a></li>
+					<li class="{{navclassmainblog}}"><a href="/blog">ALL BLOG POSTS</a></li>
+					<li class="{{navclassmainmyposts}}"><a href="/blog?user=user.id">MY BLOG POSTS</a></li>
+					<li class="{{navclasslogin}}"><a href="/login">LOGIN</a></li>
+					<li><a href="/logout">LOG OUT</a></li>
+					
 				</ul><!--nav navbar-nav-->
 			</div><!--collapse navbar-collapse-->
 		</div><!--container-fluid-->
 	</nav>
 	<div class="content">
+	{% with messages = get_flashed_messages(with_categories=True) %}
+        <ul>
+        {% for category,message in messages %}
+            <li class="{{category}}">{{message}}</li>
+        {% endfor %}
+        </ul>
+    {% endwith %}
+
     {% block content %}
     {% endblock %}
     </div>
