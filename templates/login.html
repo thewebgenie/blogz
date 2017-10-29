@@ -3,15 +3,25 @@
 {% block content %}
 <div class="pageborder">
 <h3>Login</h1>
-
 <form action="/login" method="post">
-	<label for="'username">Username</label>
-	<input name="username" type="text" value="{{ username }}">
-	<label for="password">Password</label></td>
-	<input name="password" type="password"> <br /><br />
-	<input type="submit" value="Login">
+	<div class="table-responsive">
+    <table class="table-condensed">
+        <tr>
+            <td><label for="'username">Username</label></td>
+            <td>
+                <input name="username" type="text" value="{{username}}">
+            </td>
+        </tr>
+        <tr>
+            <td><label for="password">Password</label></td>
+            <td>
+                <input name="password" type="password">
+            </td>
+        </tr>
+    </table>
+    <input type="submit" value="Login">
+    </div>
 </form>
-<br />
 <p>New User? <form action="/signup">
   <input type="submit" value="Create Account"/>
 </form>

@@ -1,18 +1,24 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h4 class="error">{{errormsg}}</h4>
-    <h1>Build A Blog</h1>
     <form class="form" method='post' action='newpost'>
-        <label class="form">
-            Blog Title:
-            <input type="text" name='title' />
-        </label>
-        <br />
-        <label>
-            Blog Content:
-            <textarea name="body"></textarea>
-        </label><br />
-        <input type="submit" value='Add Entry' />
+    <div class="table-responsive">
+    <table class="table-condensed">
+        <tr>
+            <td><label for="title">Blog Title</label></td>
+            <td>
+                <input type="text" name='title' value="{{title}}"/>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="content">Blog Content</label></td>
+            <td>
+                <textarea name="body">{{body}}</textarea>
+            </td>
+        </tr>
+    </table>
+    <input type="submit" value="Add Entry">
+    </div>
     </form>
+    <form class="form" method='post' action='newpost'>
 {% endblock %}

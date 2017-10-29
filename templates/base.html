@@ -7,10 +7,14 @@
         <link rel="stylesheet" type="text/css" href="../static/style.css"> 
         <!--link to font awesome-->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<!-- link to google fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Covered+By+Your+Grace|Homemade+Apple" rel="stylesheet">
     </head>
 <body>
+	<header>
 	<h1 style="text-align: left">BLOGZ</h1>
-	<p>Bringing blogs to your doorstep</p>
+	<h6>Bringing blogs to your doorstep</h6>
+	</header>
 	<nav class="navbar navbar-inverse bg-inverse">
 		<div class="container-fluid">
 			<div class="navbar-header">
@@ -22,18 +26,21 @@
 			</div><!--navbar-header-->
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav">
-					<li><a href="/" class="{{home}}fa fa-home fa-2x"></a></li>
+					<li><a href="/" class="{{home}} fa fa-home fa-2x"></a></li>
 				    <li class="{{navclassnewpost}}"><a href="/newpost">ADD BLOG ENTRY</a></li>
 					<li class="{{navclassmainblog}}"><a href="/blog">ALL BLOG POSTS</a></li>
-					<li class="{{navclassmainmyposts}}"><a href="/blog?user=user.id">MY BLOG POSTS</a></li>
-					<li class="{{navclasslogin}}"><a href="/login">LOGIN</a></li>
-					<li><a href="/logout">LOG OUT</a></li>
-					
+					<!-- <li class="{{navclassmainmyposts}}"><form method="post" action="/blog"><input type="submit" value="MY BLOG POSTS"></form></li> -->
 				</ul><!--nav navbar-nav-->
+				<ul class="nav navbar-nav navbar-right">
+      				<li class="{{navclasslogin}}"><a href="/login">LOGIN</a></li>
+					<li><a href="/logout">LOG OUT</a></li>
+    			</ul>
 			</div><!--collapse navbar-collapse-->
 		</div><!--container-fluid-->
 	</nav>
 	<div class="content">
+		<div class="transparency">
+	<h1>{{title}}</h1>
 	{% with messages = get_flashed_messages(with_categories=True) %}
         <ul>
         {% for category,message in messages %}
@@ -44,6 +51,7 @@
 
     {% block content %}
     {% endblock %}
+    </div>
     </div>
 
 </body>

@@ -1,6 +1,22 @@
 
 .error {
 	color: red;
+	color: #a94442;
+    background-color: #f2dede;
+    border: 2px solid #ebccd1;
+	list-style: none;
+}
+.green {
+	color: #3c763d;
+    background-color: #dff0d8;
+    border: 2px solid #d6e9c6;
+    list-style: none;
+}
+.info {
+	color: #31708f;
+    background-color: #d9edf7;
+    border: 2px solid #bce8f1;
+    list-style: none;
 }
 body {
 	background-color: black;
@@ -13,6 +29,7 @@ body {
 }
 .navbar {
 	border-bottom: 2px solid #57cfce;
+	border-top: 2px solid #57cfce;
 	background-color: black
 }
 .navbar-toggle span {
@@ -23,11 +40,17 @@ a: hover {
 }
 .content {
 	text-align: center;
+	background-image: url("cbg.jpg");
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+    background-size: cover;
+    min-height: 674px;
 }
 form {
 	text-align: center;
 }
-input[type='text'] {
+input[type='text'], input[type='password'] {
 	color: black;
 }
 input[type='submit'] {
@@ -48,11 +71,48 @@ input[type='submit']:hover {
 form {
 	margin: 2px;
 }
-.pageborder {
+/*.pageborder {
 	border: 3px solid #57cfce;
 	border-radius: 5%;
 	padding: 4px;
-}
+}*/
 table {
 	margin: auto;
+}
+h6 {
+	font-size: 1.5em;
+	font-family: 'Covered By Your Grace', cursive;
+	/*font-family: 'Homemade Apple', cursive;*/
+}
+textarea {
+  display: block;
+  border: 2px solid #74637f;
+  border-radius: 0;
+  color: #444;
+}
+header {
+	margin: 0px;
+	background-image: url("https://png.pngtree.com/thumb_back/fw800/back_pic/00/04/71/475624e23d193c2.jpg");
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+    background-size: cover;
+    min-height: 155px;
+    padding-top: 100px;   
+}  
+header h1, header h6 {
+	margin: 0px;
+	background-color: rgba(0, 0, 0, .5);
+	display: block;
+	vertical-align: bottom;
+}
+.transparency {
+	background-color: rgba(0, 0, 0, .5);
+	min-height: 674px;
+}
+a {
+	color: #9ce217;
+}
+a:hover {
+	color: tomato;
 }
