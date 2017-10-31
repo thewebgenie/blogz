@@ -42,6 +42,9 @@ class User(db.Model):
         self.username = username
         self.password = password
         
+"""@app.context_processor
+def userhomepage():
+    return dict(session=session['username'])      """
 
 @app.before_request
 def require_login():
@@ -126,7 +129,7 @@ def new_post():
             return render_template('newpost.html',navclassnewpost='active', body=blog_body )
         elif blog_body == '':
             flash('Blog Body cannot be empty', 'error')
-            return render_template('newpost.html',navclassnewpost='active', title=blog_title)
+            return render_template('newpost.html',navclassnewpost='active', titlec=blog_title)
         else:
             new_blog = Blog(blog_title, blog_body, owner)
             db.session.add(new_blog)
@@ -156,7 +159,7 @@ def display_blogs():
             return render_template('userpage.html', title="", blogs=blogs, user=owner, navclassmainmyposts='active')
 """
     elif request.method == 'POST':
-        session['username'] = username
+        zxzxzx x zczxZxXXZ = username
         blogs = Blog.query.filter_by(owner=session['username']).all()
         return render_template('userpage.html', title="Yoour Blogs", blogs=blogs, user=owner, navclassmainmyposts='active')
         """
